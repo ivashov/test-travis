@@ -1,4 +1,4 @@
-if [ -d $HOME/python ]; then
+if [ -f $HOME/python/built ]; then
     echo Python already installed, skipping
     exit 0
 fi
@@ -9,3 +9,4 @@ cd Python-3.4.3
 ./configure --prefix=$HOME/python
 make
 make install
+touch $HOME/python/built
