@@ -6,9 +6,15 @@ $res = pg_query($dbconn, "SELECT users.name FROM users;");
 $row = pg_fetch_row($res);
 
 if ($row) {
-    echo $row[0];
+    $js = $row[0];
+    $arr = json_decode($js);
+    echo $arr["val"];
 } else {
     echo "Test";
 }
 
-pg_exec("INSERT INTO users (name) VALUES ('qwer');");
+$arr = array("val" => "qwer");
+$js = json_encode(arr);
+$jse = pg_escape_string($dbconn, $js);
+
+pg_exec("INSERT INTO users (name) VALUES ('$jse');");
