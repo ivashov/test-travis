@@ -6,16 +6,12 @@ branches:
 
 addons:
     postgresql: "9.3"
+    apt:
+        packages:
+            - python3
 
 php:
     - 5.4
-
-cache:
-    directories:
-        - $HOME/python
-
-install:
-    - bash ./install_python.sh
 
 before_script:
     - psql -c 'create database tdatabase;' -U postgres
