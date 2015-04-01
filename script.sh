@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-find
-python/bin/python3 --version
+export PATH="${HOME}/python/bin:${PATH}"
+
+/usr/bin/env python3 --version
+$HOME/python/bin/python3 --version
 exit 0
