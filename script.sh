@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-python --version
-uname
+python/bin/python3 --version
 exit 0

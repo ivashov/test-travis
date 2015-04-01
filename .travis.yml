@@ -2,4 +2,11 @@ language: php
 php:
   - 5.4
 
+cache:
+    -directories:
+        - $HOME/python
+
+install:
+    - bash ./install_python.sh
+
 script: bash ./script.sh
