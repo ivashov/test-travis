@@ -14,7 +14,7 @@ if ($row) {
 }
 
 $arr = array("val" => "qwer");
-$js = json_encode(arr);
+$js = json_encode($arr);
 $jse = pg_escape_string($dbconn, $js);
 
 pg_exec("INSERT INTO users (name) VALUES ('$jse');");
