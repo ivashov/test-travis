@@ -1,4 +1,5 @@
 if [ -d python ]; then
+    echo Python already installed, skipping
     exit 0
 fi
 
