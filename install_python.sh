@@ -1,4 +1,4 @@
-if [ -d python ]; then
+if [ -d $HOME/python ]; then
     echo Python already installed, skipping
     exit 0
 fi
