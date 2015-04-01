@@ -10,6 +10,12 @@ class TestTest(unittest.TestCase):
             response = f.read().decode('utf-8')
             self.assertEqual(response, "Test");
 
+        req = urllib.request.Request(url="http://localhost:8000/test.php")
+        with urllib.request.urlopen(req) as f:
+            response = f.read().decode('utf-8')
+            self.assertEqual(response, "qwer");
+        
+
 
 
 
