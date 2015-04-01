@@ -1,6 +1,10 @@
 language: php
+
+addons:
+    postgresql: "9.3"
+
 php:
-  - 5.4
+    - 5.4
 
 cache:
     directories:
@@ -8,5 +12,9 @@ cache:
 
 install:
     - bash ./install_python.sh
+
+before_script:
+    - psql -c 'create database tdatabase;' -U postgres
+    - psql -U postgres tdatabase < base.pg
 
 script: bash ./script.sh
