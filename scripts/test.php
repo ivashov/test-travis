@@ -7,7 +7,7 @@ $row = pg_fetch_row($res);
 
 if ($row) {
     $js = $row[0];
-    $arr = json_decode($js);
+    $arr = json_decode($js, true);
     echo $arr["val"];
 } else {
     echo "Test";
