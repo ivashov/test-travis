@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-which python
-which python3
+python --version
 uname
 exit 0
